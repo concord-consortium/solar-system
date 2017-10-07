@@ -35,6 +35,8 @@ public class FirstPersonController : MonoBehaviour {
 	}
 
     private void FixedUpdate() {
-        myBody.MovePosition(myBody.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        if (Camera.main.name == "AntCamera") {
+            myBody.MovePosition(myBody.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+        }
     }
 }
