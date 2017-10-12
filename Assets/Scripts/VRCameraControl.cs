@@ -7,6 +7,8 @@ public class VRCameraControl : MonoBehaviour {
   public RenderTexture viewTexture;
   public GameObject antView;
   public GameObject personView;
+  public GameObject playerMarker;
+  public GameObject cameraDirectionMarker;
 
   public GameObject ant;
   public GameObject planet;
@@ -18,6 +20,7 @@ public class VRCameraControl : MonoBehaviour {
 
   void Awake() {
     trackedObj = GetComponent<SteamVR_TrackedObject>();
+    playerMarker.SetActive(false);
   }
 
   void Start() {
@@ -41,11 +44,19 @@ public class VRCameraControl : MonoBehaviour {
 
           personView.SetActive(true);
           antView.GetComponent<Camera>().targetTexture = viewTexture;
+
+          playerMarker.SetActive(true);
+          playerMarker.transform.position = antView.transform.position;
+          playerMarker.transform.up = (antView.transform.position - planet.transform.position).normalized;
+
+          cameraDirectionMarker.transform.rotation = antView.transform.rotation;
+          cameraDirectionMarker.transform.Rotate(-90, 0, 0);
         } else {
           // Switch to ant view
           antView.tag = "MainCamera";
           personView.tag = "Untagged";
 
+          playerMarker.SetActive(false);
           personView.SetActive(false);
           antView.GetComponent<Camera>().targetTexture = null;
         }

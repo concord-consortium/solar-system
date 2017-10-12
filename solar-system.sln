@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{20914B5B-7332-E7CE-5662-7F101C6FC663}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solar-system", "Assembly-CSharp.csproj", "{20914B5B-7332-E7CE-5662-7F101C6FC663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{0531B523-C73C-DF62-CB10-9B9762B736B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solar-system", "Assembly-CSharp-Editor.csproj", "{0531B523-C73C-DF62-CB10-9B9762B736B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20914B5B-7332-E7CE-5662-7F101C6FC663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20914B5B-7332-E7CE-5662-7F101C6FC663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20914B5B-7332-E7CE-5662-7F101C6FC663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20914B5B-7332-E7CE-5662-7F101C6FC663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0531B523-C73C-DF62-CB10-9B9762B736B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
@@ -47,8 +50,5 @@ Global
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/x-csharp
 		$3.scope = text/x-csharp
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
