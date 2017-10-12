@@ -11,6 +11,15 @@ public class VRCameraControl : MonoBehaviour {
   public GameObject ant;
   public GameObject planet;
 
+  private SteamVR_TrackedObject trackedObj;
+  private SteamVR_Controller.Device Controller {
+    get { return SteamVR_Controller.Input((int)trackedObj.index); }
+  }
+
+  void Awake() {
+    trackedObj = GetComponent<SteamVR_TrackedObject>();
+  }
+
   void Start() {
     if (UnityEngine.VR.VRDevice.isPresent) {
       antView.SetActive(true);
@@ -24,8 +33,7 @@ public class VRCameraControl : MonoBehaviour {
   // Update is called once per frame
   void Update() {
     if (UnityEngine.VR.VRDevice.isPresent) {
-      
-      if (Input.GetKeyDown(KeyCode.C)) {
+      if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Grip)) {
         if (antView.tag == "MainCamera") {
           // Switch to person view
           antView.tag = "Untagged";
